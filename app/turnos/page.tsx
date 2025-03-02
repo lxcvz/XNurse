@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import { getTurns } from "@/lib/getTurns";
 import { TurnList } from "../../components/turn/TurnList";
 
-export default async function Home() {
+export default async function TurnPage() {
   const data = await getTurns();
 
   return (
