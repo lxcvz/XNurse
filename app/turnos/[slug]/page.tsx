@@ -5,12 +5,12 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { MdArrowBack } from "react-icons/md";
 
-export default async function TurnDetailsWrapper({
+export default async function TurnDetailPage({
   params,
-}: Readonly<{
-  params: { slug: string };
-}>) {
-  const { slug } = await params;
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const slug = (await params).slug;
 
   const turnData = await getTurnDetailById(slug);
 

@@ -149,10 +149,10 @@ const mock = [
 ];
 
 export async function GET(
-  req: NextRequest,
-  { params }: { params: { slug: string } }
+  request: Request,
+  { params }: { params: Promise<{ slug: string }> }
 ) {
-  const { slug } = await params;
+  const slug = (await params).slug;
 
   const turn = mock.find((data) => String(data.id) === slug);
 
