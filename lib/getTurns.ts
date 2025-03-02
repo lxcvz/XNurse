@@ -1,11 +1,11 @@
 import { TurnCard } from "@/app/types/turn";
 
 export async function getTurns(): Promise<TurnCard[]> {
-  await new Promise((resolve) => setTimeout(resolve, 2500));
+  // await new Promise((resolve) => setTimeout(resolve, 2500));
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_APP_BASE_URL}/api/turn`,
     {
-      cache: "no-store",
+      next: { revalidate: 5 * 60 },
     }
   );
 

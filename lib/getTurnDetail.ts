@@ -5,7 +5,7 @@ export async function getTurnDetailById(slug: string): Promise<TurnData> {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_APP_BASE_URL}/api/turn/${slug}`,
     {
-      cache: "no-store",
+      next: { revalidate: 5 * 60 },
     }
   );
 
