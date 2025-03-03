@@ -14,16 +14,22 @@ export default function TurnDetail({ turnData }: { turnData: TurnData }) {
   const [isApplied, setIsApplied] = useState(false);
 
   const handleApply = () => {
-    setisLoading(true);
+    try {
+      setisLoading(true);
 
-    setTimeout(() => {
-      toast("Sua candidatura foi enviada com sucesso!", {
-        description: "Você irá receber a confirmação em seu e-mail.",
+      setTimeout(() => {
+        toast.success("Sua candidatura foi enviada com sucesso!", {
+          description: "Você irá receber uma confirmação em seu e-mail.",
+        });
+
+        setisLoading(false);
+        setIsApplied(true);
+      }, 1000);
+    } catch (err) {
+      toast.error("Falha ao candidatar-se.", {
+        description: "Tente novamente mais tarde.",
       });
-
-      setisLoading(false);
-      setIsApplied(true);
-    }, 1000);
+    }
   };
 
   return (
