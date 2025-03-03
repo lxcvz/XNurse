@@ -29,8 +29,8 @@ export default function TurnDetail({ turnData }: { turnData: TurnData }) {
   return (
     <div>
       <div className="rounded-lg p-6 mb-6 flex flex-col md:flex-row gap-6 shadow-md border-2 border-transparent">
-        <div className="w-full md:w-1/4">
-          <div className="relative bg-white w-full aspect-square rounded-md shadow-sm overflow-hidden">
+        <div className="flex md:w-1/2 h-auto">
+          <div className="relative bg-white w-[120px] aspect-square rounded-md shadow-sm overflow-hidden mr-3">
             <Image
               src="https://picsum.photos/200/300?random=1"
               alt="Logo do contratante"
@@ -38,21 +38,23 @@ export default function TurnDetail({ turnData }: { turnData: TurnData }) {
               className="object-cover"
             />
           </div>
-        </div>
-
-        <div>
-          <h1 className="text-xl font-semibold mb-2">{turnData.clientName}</h1>
-          <div className="flex flex-row gap-2">
-            <div className="w-full md:w-1/2">
-              <Link className="text-blue-500" href="">
-                {turnData.website}
-              </Link>
-              <p className="text-gray-600">{turnData.location}</p>
-            </div>
-            <div className="w-full md:w-2/4">
-              <p className="text-gray-700 text-sm">{turnData.mission}</p>
+          <div className="w-full">
+            <h1 className="text-xl font-semibold mb-2">
+              {turnData.clientName}
+            </h1>
+            <div className="flex flex-row gap-2">
+              <div className="w-full md:w-1/2">
+                <Link className="text-blue-500" href="">
+                  {turnData.website}
+                </Link>
+                <p className="text-gray-600">{turnData.location}</p>
+              </div>
             </div>
           </div>
+        </div>
+
+        <div className="w-full md:w-1/3">
+          <p className="text-gray-700 text-sm">{turnData.mission}</p>
         </div>
       </div>
 
