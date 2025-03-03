@@ -5,6 +5,7 @@ export async function GET() {
     [
       {
         id: 1,
+        clientName: "Cliente 1",
         title: "Enfermeiro Plantonista",
         location: "São Paulo, SP",
         salary: "R$ 350,00",
@@ -13,6 +14,7 @@ export async function GET() {
       },
       {
         id: 2,
+        clientName: "Cliente 2",
         title: "Técnico de Enfermagem",
         location: "São Paulo, SP",
         salary: "R$ 280,00",
@@ -21,6 +23,7 @@ export async function GET() {
       },
       {
         id: 3,
+        clientName: "Cliente 3",
         title: "Enfermeiro UTI",
         location: "São Paulo, SP",
         salary: "R$ 400,00",
@@ -29,6 +32,7 @@ export async function GET() {
       },
       {
         id: 4,
+        clientName: "Cliente 4",
         title: "Enfermeiro Pediátrico",
         location: "São Paulo, SP",
         salary: "R$ 370,00",
@@ -37,6 +41,7 @@ export async function GET() {
       },
       {
         id: 5,
+        clientName: "Cliente 5",
         title: "Técnico de Enfermagem Domiciliar",
         location: "São Paulo, SP",
         salary: "R$ 250,00",
@@ -45,6 +50,7 @@ export async function GET() {
       },
       {
         id: 6,
+        clientName: "Cliente 6",
         title: "Enfermeiro Obstetra",
         location: "São Paulo, SP",
         salary: "R$ 420,00",
@@ -53,6 +59,7 @@ export async function GET() {
       },
       {
         id: 7,
+        clientName: "Cliente 7",
         title: "Técnico de Enfermagem Emergência",
         location: "São Paulo, SP",
         salary: "R$ 300,00",
@@ -61,6 +68,7 @@ export async function GET() {
       },
       {
         id: 8,
+        clientName: "Cliente 8",
         title: "Enfermeiro Cirúrgico",
         location: "São Paulo, SP",
         salary: "R$ 450,00",

@@ -43,8 +43,11 @@ export function TurnList({ data }: { data: TurnCard[] }) {
               >
                 <div className="flex flex-col justify-between h-full">
                   <div className="container mb-3">
-                    <h3 className="font-bold text-lg text-gray-800 mb-3">
+                    <h3 className="font-bold text-lg text-gray-800">
                       {turn.title}
+                    </h3>
+                    <h3 className="font-bold text-sm text-gray-600 mb-3">
+                      {turn.clientName}
                     </h3>
                     <div className="flex items-center text-gray-600">
                       <svg

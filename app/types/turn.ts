@@ -17,6 +17,7 @@ export type TurnData = {
 
 export type TurnCard = {
   id: number;
+  clientName: string;
   title: string;
   location: string;
   salary: string;
